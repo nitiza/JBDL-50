@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>L5_Maven_Intro</artifactId>
+    <artifactId>L7_Calculator</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -14,13 +14,11 @@
     </properties>
 
     <dependencies>
-
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.21</version>
+            <groupId>org.example</groupId>
+            <artifactId>L5_Maven_Intro</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
-
     </dependencies>
 
 </project>
