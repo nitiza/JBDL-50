@@ -25,5 +25,7 @@ public class Employee {
 
     private Integer age;
 
-    private Integer yearOfExpreicnece;
+    private String country;
+
+    private Integer yearsOfExp;
 }

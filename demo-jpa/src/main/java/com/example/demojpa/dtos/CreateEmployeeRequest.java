@@ -15,9 +15,6 @@ import javax.validation.constraints.NotNull;
 @Builder
 public class CreateEmployeeRequest {
 
-    @Min(1)
-    private Integer id;
-
     @Max(60)
     @Min(18)
     @NotNull
@@ -28,13 +25,18 @@ public class CreateEmployeeRequest {
 
     private String address;
 
+    private String country;
+
+    private Integer yearsOfExp;
+
 
     public Employee to() {
         return Employee.builder()
-                .id(this.id)
                 .name(this.name)
                 .address(this.address)
                 .age(this.age)
+                .country(this.country)
+                .yearsOfExp(this.yearsOfExp)
                 .build();
     }
 

@@ -3,6 +3,7 @@ package com.example.demojpa.controllers;
 
 import com.example.demojpa.dtos.CreateEmployeeRequest;
 import com.example.demojpa.dtos.GetEmployeesResponse;
+import com.example.demojpa.models.Employee;
 import com.example.demojpa.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -46,6 +47,11 @@ public class EmployeeController {
     @DeleteMapping("/employee")
     public void deleteEmployee(@RequestParam("id") Integer employeeId){
         employeeService.delete(employeeId);
+    }
+
+    @PutMapping("/employee/{id}")
+    public void updateEmployee(@PathVariable("id") int id, @RequestBody CreateEmployeeRequest createEmployeeRequest) {
+        employeeService.update(id, createEmployeeRequest.to());
     }
 
 

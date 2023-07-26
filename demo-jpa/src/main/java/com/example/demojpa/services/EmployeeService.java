@@ -13,7 +13,7 @@ public class EmployeeService {
     @Autowired
     EmployeeRepository employeeRepository;
 
-    public void create(Employee employee){
+    public void create(Employee employee) {
         employeeRepository.save(employee);
 
     }
@@ -28,7 +28,13 @@ public class EmployeeService {
                 .orElse(null);
     }
 
-    public void delete(Integer id){
+    public void delete(Integer id) {
         employeeRepository.deleteById(id);
+    }
+
+    public void update(Integer id, Employee employee) {
+        employeeRepository.update(employee.getName(), employee.getAge(), employee.getCountry(),
+                employee.getYearsOfExp(), employee.getAddress(), id);
+
     }
 }
